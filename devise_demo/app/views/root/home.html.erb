@@ -1,0 +1,10 @@
+<h1>Wellcome to Devise_Demo</h1>
+<center>
+  <% if current_user %>
+    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %> |
+    <%= link_to('Change Password', edit_registration_path(:user)) %>
+  <% else %>
+    <%= link_to('Sign Up', new_registration_path(:user)) %> |
+    <%= link_to('Login', new_session_path(:user)) %>
+  <% end %>
+</center>
